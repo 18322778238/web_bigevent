@@ -19,7 +19,7 @@ $(function () {
 // 获取用户的基本信息
 function getUserInfo() {
     $.ajax({
-        method:'GET',
+        type:'GET',
         url: '/my/userinfo',
         //headers 就是请求头对象
         // headers:{
@@ -48,7 +48,7 @@ function renderAvatar(user) {
     // 3.按需渲染用户的头像
     if(user.user_pic !== null) {
         // 3.1 渲染图片头像
-        $('.layui-nav-img').attr('src',user.user_pic).show()
+        $('.layui-nav-img').prop('src',user.user_pic).show()
         $('.text-avatar').hide()
     }else {
         // 3.2 渲染文本头像

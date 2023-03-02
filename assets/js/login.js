@@ -49,7 +49,7 @@ $(function () {
         e.preventDefault(); 
         $.ajax({
             url:'/api/login',
-            method:'POST',
+            type:'POST',
             // 快速获取表单数据
             data:$(this).serialize(),
             success: function (res) {
